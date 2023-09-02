@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --button-rgb: 51, 65, 85;
+    --button-hover-rgb: 67, 65, 85;
+    --calculator-rgb: 0, 0, 0; /* TODO: Determine what rgb we want */
+    --textbox-rgb: 21, 21, 21; /* TODO: Determine what rgb we want */
+    --expression-text-rgb: 69, 69, 69; /* TODO: Determine what rgb we want */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+        --button-rgb: 51, 65, 85;
+        --button-hover-rgb: 67, 65, 85;
+        --calculator-rgb: 255, 255, 255; /* TODO: Determine what rgb we want */
+        --textbox-rgb: 21, 21, 21; /* TODO: Determine what rgb we want */
+        --expression-text-rgb: 69, 69, 69; /* TODO: Determine what rgb we want */
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: rgb(var(--button-rgb));
+}
+
+.button:hover {
+    background-color: rgb(var(--button-hover-rgb));
+}
+
+.calculator {
+    background-color: rgb(var(--calculator-rgb));
+}
+
+.textbox {
+    background-color: rgb(var(--textbox-rgb));
+}
+
+.expression {
+    color: rgb(var(--expression-text-rgb));
+}
+
